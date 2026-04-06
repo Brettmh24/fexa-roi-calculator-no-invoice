@@ -804,7 +804,7 @@
   :root{--off-black:#0F0F0F;--deep-teal:#00313D;--sky-blue:#009C9E;--bright-aqua:#27B2B5;--aqua:#66DADE;--soft-aqua:#9BF6F6;--pale-aqua:#C7FCFC;--mist:#E3F9F9;--off-white:#F9FBFB;--gray:#EBEFF2;--lime:#7ECE3B;--border:#D8E4E4}
   *{margin:0;padding:0;box-sizing:border-box}
   body{background:#fff;color:var(--off-black);font-family:'Inter',sans-serif;font-size:11px;line-height:1.4;width:960px;margin:0 auto;overflow-x:hidden}
-  @media print{body{width:100%}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+  @page{size:landscape;margin:0.25in}@media print{body{width:100%;transform:scale(0.92);transform-origin:top left}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}.page{padding:10px 16px 10px}}
   .page{padding:22px 28px 20px;background:#fff;width:100%;overflow:hidden}
   .header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--border)}
   .logo-block{display:flex;align-items:center;gap:10px}

@@ -557,6 +557,10 @@
             const commsFexa = (followUpWOs * 1 / 60) * 4;
             const commsHours = commsToday - commsFexa;
 
+            const invoiceToday = totalInv * 10 / 60;
+            const invoiceFexa = totalInv * 2 / 60;
+            const invoiceHours = invoiceToday - invoiceFexa;
+
             const wosInternal = totalWOs * 0.4;
             const weeklyInternal = wosInternal / 52;
             const weeklyReviewHrs = weeklyInternal * 3 / 60;
@@ -566,6 +570,7 @@
             const reportingHours = 9 * 52;
 
             const timeBackItems = [
+                { label: 'Invoice Automation', detail: `${totalInv.toLocaleString()} invoices × 8 min saved each`, value: invoiceHours, hours: invoiceHours },
                 { label: 'AI Manual WO Review Reduction', detail: `${Math.round(wosInternal).toLocaleString()} internal WOs, 80% review eliminated`, value: manualReviewHours, hours: manualReviewHours },
                 { label: 'AI Query Agent / Reporting', detail: '9 hrs/week automated reporting', value: reportingHours, hours: reportingHours },
                 { label: 'Automated Communications', detail: `${Math.round(followUpWOs)} WOs/qtr needing follow-up, 6 min saved each`, value: commsHours, hours: commsHours },
@@ -740,6 +745,7 @@
                 { label: 'Workflow Opt.', value: Math.round(d.workflowHours) },
                 { label: 'Auto Comms', value: Math.round(d.commsHours) },
                 { label: 'AI Query Agent', value: Math.round(d.reportingHours) },
+                { label: 'Invoice Auto.', value: Math.round(d.invoiceHours) },
                 { label: 'AI WO Review', value: Math.round(d.manualReviewHours) },
             ].filter(i => i.value > 0).sort((a, b) => a.value - b.value);
             const hTotal = Math.round(d.totalTimeHours);

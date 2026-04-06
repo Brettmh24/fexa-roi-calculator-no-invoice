@@ -1126,6 +1126,7 @@ new Chart(document.getElementById('capacityChart'),{
         //  CLEAR / NEW CLIENT
         // ═══════════════════════════════════════════════════════════
        function downloadPDF() {
+   function downloadPDF() {
     if (!lastCalcData) { calculate(); }
     generateReport();
     setTimeout(function() {
@@ -1135,7 +1136,9 @@ new Chart(document.getElementById('capacityChart'),{
         win.document.write(iframe.srcdoc);
         win.document.close();
         win.onload = function() {
-            win.print();
+            setTimeout(function() {
+                win.print();
+            }, 2000);
         };
     }, 500);
 }

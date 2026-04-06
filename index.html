@@ -25,48 +25,25 @@
             --gray-900: #111827;
             --shadow: 0 4px 24px rgba(0,0,0,0.08);
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: var(--gray-50);
-            color: var(--gray-900);
-            line-height: 1.6;
+            background: var(--gray-50); color: var(--gray-900); line-height: 1.6;
         }
-
         .header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            text-align: center;
-            padding: 44px 24px 36px;
+            color: white; text-align: center; padding: 44px 24px 36px;
         }
         .header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.5px; }
         .header p { font-size: 1.05rem; opacity: 0.85; max-width: 620px; margin: 0 auto; }
-
         .layout {
-            max-width: 1200px;
-            margin: -20px auto 48px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 380px 1fr;
-            gap: 28px;
+            max-width: 1200px; margin: -20px auto 48px; padding: 0 20px;
+            display: grid; grid-template-columns: 380px 1fr; gap: 28px;
         }
-
-        @media (max-width: 900px) {
-            .layout { grid-template-columns: 1fr; }
-        }
-
-        .card {
-            background: white;
-            border-radius: 14px;
-            box-shadow: var(--shadow);
-            padding: 28px;
-        }
-
+        @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+        .card { background: white; border-radius: 14px; box-shadow: var(--shadow); padding: 28px; }
         .card-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 2px; }
         .card-subtitle { font-size: 0.82rem; color: var(--gray-500); margin-bottom: 20px; }
-
         .input-group { margin-bottom: 14px; }
         .input-group label {
             display: block; font-size: 0.78rem; font-weight: 600; color: var(--gray-700);
@@ -88,11 +65,9 @@
             box-shadow: 0 0 0 3px rgba(26,86,219,0.1); background: white;
         }
         .input-wrapper input::placeholder { color: var(--gray-300); }
-
         .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; }
         .input-grid .full-width { grid-column: 1 / -1; }
         @media (max-width: 500px) { .input-grid { grid-template-columns: 1fr; } }
-
         .calculate-btn {
             width: 100%; padding: 13px; margin-top: 6px;
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -101,19 +76,15 @@
             transition: transform 0.15s, box-shadow 0.15s;
         }
         .calculate-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(26,86,219,0.3); }
-
         .report-btn {
             width: 100%; padding: 13px; margin-top: 8px;
             background: linear-gradient(135deg, #00313D 0%, #004d5a 100%);
             color: white; border: none; border-radius: 10px;
             font-size: 1rem; font-weight: 700; cursor: pointer;
-            transition: transform 0.15s, box-shadow 0.15s;
-            display: none;
+            transition: transform 0.15s, box-shadow 0.15s; display: none;
         }
         .report-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,49,61,0.3); }
-
         .results-col { display: flex; flex-direction: column; gap: 20px; }
-
         .hero-savings {
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
             border-radius: 14px; padding: 28px; color: white; text-align: center;
@@ -121,12 +92,8 @@
         .hero-savings .label { font-size: 0.82rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85; }
         .hero-savings .amount { font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; line-height: 1.15; }
         .hero-savings .sub { font-size: 0.95rem; opacity: 0.9; margin-top: 4px; }
-
-        .stat-row {
-            display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px;
-        }
+        .stat-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
         @media (max-width: 600px) { .stat-row { grid-template-columns: 1fr; } }
-
         .stat-card {
             background: white; border-radius: 12px; padding: 18px 16px;
             box-shadow: var(--shadow); text-align: center;
@@ -137,17 +104,13 @@
         .stat-card.green .stat-value { color: var(--accent-dark); }
         .stat-card.blue .stat-value { color: var(--primary); }
         .stat-card.purple .stat-value { color: #7c3aed; }
-
         .section-header {
             display: flex; align-items: center; gap: 8px;
             margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--gray-100);
         }
-        .section-header .dot {
-            width: 10px; height: 10px; border-radius: 50%;
-        }
+        .section-header .dot { width: 10px; height: 10px; border-radius: 50%; }
         .section-header h3 { font-size: 0.9rem; font-weight: 700; }
         .section-header .section-total { margin-left: auto; font-size: 1rem; font-weight: 800; }
-
         .line-item {
             display: flex; justify-content: space-between; align-items: center;
             padding: 8px 0; border-bottom: 1px solid var(--gray-100);
@@ -156,17 +119,14 @@
         .line-item .li-label { font-size: 0.85rem; color: var(--gray-700); }
         .line-item .li-detail { font-size: 0.72rem; color: var(--gray-500); margin-top: 1px; }
         .line-item .li-value { font-size: 0.9rem; font-weight: 700; white-space: nowrap; }
-
         .placeholder-msg {
             text-align: center; padding: 60px 24px; color: var(--gray-500); font-size: 0.95rem;
         }
         .placeholder-msg .icon { font-size: 2.5rem; margin-bottom: 10px; opacity: 0.4; }
-
         .disclaimer {
             font-size: 0.72rem; color: var(--gray-500); text-align: center;
             margin-top: 8px; line-height: 1.5; padding: 0 12px;
         }
-
         .clear-btn {
             width: 100%; padding: 10px; margin-top: 8px;
             background: transparent; color: var(--gray-500); border: 1.5px solid var(--gray-200);
@@ -174,7 +134,6 @@
             transition: all 0.15s;
         }
         .clear-btn:hover { border-color: var(--gray-500); color: var(--gray-700); }
-
         .toast {
             position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px);
             background: #00313D; color: white; padding: 12px 24px; border-radius: 10px;
@@ -182,7 +141,6 @@
             opacity: 0; transition: all 0.3s ease; z-index: 9999; pointer-events: none;
         }
         .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-
         #results { display: none; }
         #placeholder { display: block; }
     </style>
@@ -192,119 +150,84 @@
         <h1>Fexa ROI Calculator</h1>
         <p>Enter your annual facility data to estimate savings with Fexa across time, cost avoidance, and spend optimization.</p>
     </div>
-
     <div class="layout">
         <div>
             <div class="card">
                 <div class="card-title">Annual Facility Data</div>
                 <div class="card-subtitle">Full prior year (PY) actuals</div>
-
                 <div class="input-grid">
                     <div class="input-group full-width">
                         <label>Client / Company Name</label>
-                        <div class="input-wrapper">
-                            <input type="text" id="clientName" placeholder="e.g. XPO Logistics" />
-                        </div>
+                        <div class="input-wrapper"><input type="text" id="clientName" placeholder="e.g. XPO Logistics" /></div>
                     </div>
                     <div class="input-group full-width">
                         <label>Client Website Domain <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--gray-500)">(for logo on report)</span></label>
-                        <div class="input-wrapper">
-                            <input type="text" id="clientDomain" placeholder="e.g. ae.com, xpo.com, totalwine.com" />
-                        </div>
+                        <div class="input-wrapper"><input type="text" id="clientDomain" placeholder="e.g. ae.com, xpo.com, totalwine.com" /></div>
                     </div>
                     <div class="input-group full-width">
                         <label>Total Spend</label>
-                        <div class="input-wrapper">
-                            <span class="prefix">$</span>
-                            <input type="text" id="totalSpend" class="has-prefix fmt-currency" placeholder="e.g. 43,861,995" />
-                        </div>
+                        <div class="input-wrapper"><span class="prefix">$</span><input type="text" id="totalSpend" class="has-prefix fmt-currency" placeholder="e.g. 43,861,995" /></div>
                     </div>
                     <div class="input-group full-width">
                         <label>Median Invoice Amount</label>
-                        <div class="input-wrapper">
-                            <span class="prefix">$</span>
-                            <input type="text" id="medianInvoice" class="has-prefix fmt-currency" placeholder="Auto-calculated or override" />
-                        </div>
+                        <div class="input-wrapper"><span class="prefix">$</span><input type="text" id="medianInvoice" class="has-prefix fmt-currency" placeholder="Auto-calculated or override" /></div>
                     </div>
                     <div class="input-group">
                         <label>Total Invoices</label>
-                        <div class="input-wrapper">
-                            <input type="text" id="totalInvoices" class="fmt-number" placeholder="e.g. 15,976" />
-                        </div>
+                        <div class="input-wrapper"><input type="text" id="totalInvoices" class="fmt-number" placeholder="e.g. 15,976" /></div>
                     </div>
                     <div class="input-group">
                         <label>Total Work Orders</label>
-                        <div class="input-wrapper">
-                            <input type="text" id="totalWOs" class="fmt-number" placeholder="e.g. 19,712" />
-                        </div>
+                        <div class="input-wrapper"><input type="text" id="totalWOs" class="fmt-number" placeholder="e.g. 19,712" /></div>
                     </div>
                     <div class="input-group">
                         <label># of Proposals</label>
-                        <div class="input-wrapper">
-                            <input type="text" id="proposals" class="fmt-number" placeholder="e.g. 8,652" />
-                        </div>
+                        <div class="input-wrapper"><input type="text" id="proposals" class="fmt-number" placeholder="e.g. 8,652" /></div>
                     </div>
                     <div class="input-group">
                         <label>Location Count</label>
-                        <div class="input-wrapper">
-                            <input type="text" id="locations" class="fmt-number" placeholder="e.g. 610" />
-                        </div>
+                        <div class="input-wrapper"><input type="text" id="locations" class="fmt-number" placeholder="e.g. 610" /></div>
                     </div>
                     <div class="input-group">
                         <label>Total Vendors</label>
-                        <div class="input-wrapper">
-                            <input type="text" id="vendors" class="fmt-number" placeholder="e.g. 123" />
-                        </div>
+                        <div class="input-wrapper"><input type="text" id="vendors" class="fmt-number" placeholder="e.g. 123" /></div>
                     </div>
                     <div class="input-group">
                         <label>Call Center Volume</label>
-                        <div class="input-wrapper">
-                            <input type="text" id="callCenter" class="fmt-number" placeholder="e.g. 11,000" />
-                        </div>
+                        <div class="input-wrapper"><input type="text" id="callCenter" class="fmt-number" placeholder="e.g. 11,000" /></div>
                     </div>
                     <div class="input-group">
                         <label>Total Assets</label>
-                        <div class="input-wrapper">
-                            <input type="text" id="totalAssets" class="fmt-number" placeholder="e.g. 1,871" />
-                        </div>
+                        <div class="input-wrapper"><input type="text" id="totalAssets" class="fmt-number" placeholder="e.g. 1,871" /></div>
                     </div>
                     <div class="input-group">
                         <label>Total Facilities Team Size</label>
-                        <div class="input-wrapper">
-                            <input type="text" id="fmTeamSize" class="fmt-number" placeholder="e.g. 7" />
-                        </div>
+                        <div class="input-wrapper"><input type="text" id="fmTeamSize" class="fmt-number" placeholder="e.g. 7" /></div>
                     </div>
                     <div class="input-group">
                         <label>5-Year Annual Location Growth (%)</label>
-                        <div class="input-wrapper">
-                            <input type="text" id="locationGrowth" placeholder="e.g. 6" />
-                        </div>
+                        <div class="input-wrapper"><input type="text" id="locationGrowth" placeholder="e.g. 6" /></div>
                     </div>
                     <div class="input-group">
                         <label>Client EBITDA Margin (%)</label>
-                        <div class="input-wrapper">
-                            <input type="text" id="ebitdaMargin" placeholder="e.g. 9 (default)" />
-                        </div>
+                        <div class="input-wrapper"><input type="text" id="ebitdaMargin" placeholder="e.g. 9 (default)" /></div>
                     </div>
                 </div>
-
                 <button class="calculate-btn" onclick="calculate()">Calculate My Savings</button>
                 <button class="report-btn" id="reportBtn" onclick="generateReport()">Generate One-Pager Report</button>
                 <button class="report-btn" id="pdfBtn" onclick="downloadPDF()" style="display:none;background:linear-gradient(135deg,#7c3aed 0%,#5b21b6 100%)">Download One-Pager as PDF</button>
                 <button class="report-btn" id="saveBtn" onclick="saveToPipeline()" style="display:none;background:linear-gradient(135deg,#009C9E 0%,#007A7C 100%)">Save to Pipeline Sheet</button>
                 <button class="clear-btn" onclick="clearForm()">Clear / New Client</button>
-
                 <details style="margin-top:14px;font-size:0.8rem;color:var(--gray-500)">
                     <summary style="cursor:pointer;font-weight:600;color:var(--gray-700)">Google Sheets Config</summary>
                     <div style="margin-top:8px">
                         <label style="font-size:0.75rem;font-weight:600;color:var(--gray-700);text-transform:uppercase;letter-spacing:0.3px;display:block;margin-bottom:4px">Apps Script Web App URL</label>
                         <input type="text" id="sheetUrl" placeholder="https://script.google.com/macros/s/..." style="width:100%;padding:8px 10px;font-size:0.82rem;border:1.5px solid var(--gray-200);border-radius:8px;background:var(--gray-50)" />
-                        <p style="margin-top:6px;font-size:0.72rem;color:var(--gray-500);line-height:1.5">Paste your deployed Google Apps Script URL here. See setup instructions in the README.</p>
+                        <p style="margin-top:6px;font-size:0.72rem;color:var(--gray-500);line-height:1.5">Paste your deployed Google Apps Script URL here.</p>
                     </div>
                 </details>
             </div>
         </div>
-
         <div class="results-col">
             <div id="placeholder" class="card">
                 <div class="placeholder-msg">
@@ -312,14 +235,12 @@
                     <div>Enter your facility data and click<br><strong>Calculate My Savings</strong> to see results.</div>
                 </div>
             </div>
-
             <div id="results">
                 <div class="hero-savings">
                     <div class="label">Total Estimated Annual Savings</div>
                     <div class="amount" id="grandTotal">$0</div>
                     <div class="sub" id="grandPct"></div>
                 </div>
-
                 <div class="stat-row">
                     <div class="stat-card green">
                         <div class="stat-label">Cost Avoidance</div>
@@ -337,7 +258,6 @@
                         <div class="stat-sub" id="statSpendOptPct"></div>
                     </div>
                 </div>
-
                 <div class="card">
                     <div class="section-header">
                         <div class="dot" style="background:var(--accent)"></div>
@@ -346,7 +266,6 @@
                     </div>
                     <div id="costAvoidItems"></div>
                 </div>
-
                 <div class="card">
                     <div class="section-header">
                         <div class="dot" style="background:var(--primary)"></div>
@@ -355,7 +274,6 @@
                     </div>
                     <div id="timeBackItems"></div>
                 </div>
-
                 <div class="card">
                     <div class="section-header">
                         <div class="dot" style="background:#7c3aed"></div>
@@ -364,7 +282,6 @@
                     </div>
                     <div id="spendOptItems"></div>
                 </div>
-
                 <div class="card" id="capacityCard" style="display:none">
                     <div class="section-header">
                         <div class="dot" style="background:#009C9E"></div>
@@ -392,7 +309,6 @@
                         <strong id="capSummary"></strong>
                     </div>
                 </div>
-
                 <div class="disclaimer">
                     Estimates based on Fexa customer benchmarks and your facility data inputs.
                     Actual savings may vary based on specific operational conditions.
@@ -402,6 +318,7 @@
     </div>
 
     <script>
+        // Helpers
         function fmt(n) {
             if (Math.abs(n) >= 1000000) return '$' + (n / 1000000).toFixed(2) + 'M';
             return '$' + Math.round(n).toLocaleString('en-US');
@@ -475,15 +392,12 @@
 
             // COST AVOIDANCE
             var aiCallAvoid = totalWOs * 0.03 * 0.85 * avgInvoice;
-
             var assetWOsYear = totalAssets * 2;
             var duplicateDispatches = assetWOsYear * 0.01;
             var warrantyMisrouted = assetWOsYear * 0.05 * 0.75;
             var assetAccuracy = (duplicateDispatches + warrantyMisrouted) * avgInvoice;
-
             var annualTurnovers = locations * 4 * 0.35;
             var turnoverCost = annualTurnovers * (28 * 5);
-
             var leasedPct = 0.344;
             var leasedLocations = locations * leasedPct;
             var wosPerLocation = locations > 0 ? totalWOs / locations : 0;
@@ -491,13 +405,10 @@
             var llResponsible = wosAtLeased * 0.08;
             var llMisrouted = llResponsible * 0.06;
             var llSavings = llMisrouted * avgInvoice;
-
             var repeatToday = totalWOs * 0.06;
             var repeatFexa = totalWOs * 0.03;
             var firstTimeFix = (repeatToday - repeatFexa) * 50;
-
             var fasterResolution = totalInv * 0.02 * 200;
-
             var brokerPct = 0.30;
             var shiftPct = 0.50;
             var brokerPremium = 0.20;
@@ -507,6 +418,415 @@
             var brokerSavings = shiftedSpend * brokerPremium;
 
             var costAvoidItems = [
-                { label: 'AI Call Avoidance', detail: (totalWOs*0.03).toFixed(0) + ' WOs avoided x ' + fmt(avgInvoice) + ' avg inv x 85%', value: aiCallAvoid },
-                { label: 'Asset Accuracy & Accountability', detail: (duplicateDispatches+warrantyMisrouted).toFixed(0) + ' preventable WOs x ' + fmt(avgInvoice) + ' avg inv', value: assetAccuracy },
-                { label: 'Decrease Broker Reliance', detail: Math.round(shiftedInvoices).toLocaleString() + ' invoices shifted to self-perform,
+                { label: 'AI Call Avoidance', detail: (totalWOs*0.03).toFixed(0) + ' WOs avoided \u00d7 ' + fmt(avgInvoice) + ' avg inv \u00d7 85%', value: aiCallAvoid },
+                { label: 'Asset Accuracy & Accountability', detail: (duplicateDispatches+warrantyMisrouted).toFixed(0) + ' preventable WOs \u00d7 ' + fmt(avgInvoice) + ' avg inv', value: assetAccuracy },
+                { label: 'Decrease Broker Reliance', detail: Math.round(shiftedInvoices).toLocaleString() + ' invoices shifted to self-perform, 20% premium saved', value: brokerSavings },
+                { label: 'Turnover Change Management', detail: '1.4 turnovers/location/yr (35% rate) = ' + Math.round(annualTurnovers).toLocaleString() + ' turnovers \u00d7 $140 training cost', value: turnoverCost },
+                { label: 'LL Workflow', detail: llMisrouted.toFixed(0) + ' WOs mis-routed to vendors \u00d7 ' + fmt(avgInvoice) + ' avg inv', value: llSavings },
+                { label: 'AI First-Time Fix', detail: (repeatToday-repeatFexa).toFixed(0) + ' fewer return trips \u00d7 $50 each', value: firstTimeFix },
+                { label: 'AI Faster Resolution', detail: totalInv.toLocaleString() + ' invoices \u00d7 1% onsite reduction \u00d7 $200/hr', value: fasterResolution }
+            ];
+            var costAvoidTotal = costAvoidItems.reduce(function(s, i) { return s + i.value; }, 0);
+
+            // TIME BACK (Invoice Automation REMOVED)
+            var wfCheckout = totalWOs * 0.02 * 4 / 60;
+            var wfDeadline = totalWOs * 0.04 * 4 / 60;
+            var wfAfterFact = totalWOs * 0.03 * 4 / 60;
+            var wfDeferred = totalWOs * 0.04 * 6 / 60;
+            var wfWarranty = (totalWOs * 0.0071) * 6 / 60;
+            var wfLL = llMisrouted * 10 / 60;
+            var workflowHours = wfCheckout + wfDeadline + wfAfterFact + wfDeferred + wfWarranty + wfLL;
+
+            var quarterlyWOs = totalWOs / 4;
+            var openWOs = quarterlyWOs * 0.5;
+            var followUpWOs = openWOs * 0.3;
+            var commsToday = (followUpWOs * 7 / 60) * 4;
+            var commsFexa = (followUpWOs * 1 / 60) * 4;
+            var commsHours = commsToday - commsFexa;
+
+            var wosInternal = totalWOs * 0.4;
+            var weeklyInternal = wosInternal / 52;
+            var weeklyReviewHrs = weeklyInternal * 3 / 60;
+            var fmsReduced = weeklyReviewHrs * 0.8;
+            var manualReviewHours = 5 * fmsReduced * 52;
+
+            var reportingHours = 9 * 52;
+
+            var timeBackItems = [
+                { label: 'AI Manual WO Review Reduction', detail: Math.round(wosInternal).toLocaleString() + ' internal WOs, 80% review eliminated', value: manualReviewHours, hours: manualReviewHours },
+                { label: 'AI Query Agent / Reporting', detail: '9 hrs/week automated reporting', value: reportingHours, hours: reportingHours },
+                { label: 'Automated Communications', detail: Math.round(followUpWOs) + ' WOs/qtr needing follow-up, 6 min saved each', value: commsHours, hours: commsHours },
+                { label: 'Workflow Status Automation', detail: 'Auto check-out, deadlines, cancellations, deferrals', value: workflowHours, hours: workflowHours }
+            ];
+            var totalTimeHours = timeBackItems.reduce(function(s, i) { return s + i.hours; }, 0);
+            var timeBackDollars = totalTimeHours * FTE_RATE;
+
+            var timeBackDisplay = timeBackItems.map(function(i) {
+                return {
+                    label: i.label,
+                    detail: i.detail + ' (' + fmtHrs(i.hours) + ')',
+                    value: i.hours * FTE_RATE
+                };
+            });
+
+            // R&M SPEND OPTIMIZATION
+            var budgetSavings = totalSpend * 0.005;
+            var spendOptItems = [
+                { label: 'Budget Module', detail: '0.5% of ' + fmt(totalSpend) + ' \u2014 forecast & budget adherence', value: budgetSavings }
+            ];
+            var spendOptTotal = spendOptItems.reduce(function(s, i) { return s + i.value; }, 0);
+
+            // GRAND TOTAL
+            var grandTotal = costAvoidTotal + timeBackDollars + spendOptTotal;
+
+            lastCalcData = {
+                clientName: clientName, clientDomain: clientDomain, totalSpend: totalSpend,
+                totalInv: totalInv, totalWOs: totalWOs, locations: locations, totalAssets: totalAssets,
+                avgInvoice: avgInvoice, vendors: vendors, proposals: proposals, callCenter: callCenter,
+                fmTeamSize: fmTeamSize, locationGrowth: locationGrowth, ebitdaMargin: ebitdaMargin,
+                costAvoidTotal: costAvoidTotal, costAvoidItems: costAvoidItems,
+                totalTimeHours: totalTimeHours, timeBackDollars: timeBackDollars, timeBackItems: timeBackItems,
+                spendOptTotal: spendOptTotal, budgetSavings: budgetSavings,
+                brokerSavings: brokerSavings, aiCallAvoid: aiCallAvoid,
+                grandTotal: grandTotal,
+                firstTimeFix: firstTimeFix, fasterResolution: fasterResolution,
+                llSavings: llSavings, turnoverCost: turnoverCost, assetAccuracy: assetAccuracy,
+                workflowHours: workflowHours, commsHours: commsHours,
+                reportingHours: reportingHours, manualReviewHours: manualReviewHours
+            };
+
+            // RENDER
+            document.getElementById('placeholder').style.display = 'none';
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('reportBtn').style.display = 'block';
+            document.getElementById('pdfBtn').style.display = 'block';
+            document.getElementById('saveBtn').style.display = 'block';
+
+            document.getElementById('grandTotal').textContent = fmt(grandTotal);
+            document.getElementById('grandPct').textContent =
+                totalSpend > 0 ? ((grandTotal / totalSpend) * 100).toFixed(1) + '% of total spend' : '';
+
+            document.getElementById('statCostAvoid').textContent = fmt(costAvoidTotal);
+            document.getElementById('statCostAvoidPct').textContent =
+                totalSpend > 0 ? ((costAvoidTotal / totalSpend) * 100).toFixed(1) + '% of spend' : '';
+
+            document.getElementById('statTimeBack').textContent = fmt(timeBackDollars);
+            document.getElementById('statTimeHours').textContent = fmtHrs(totalTimeHours) + ' saved';
+
+            document.getElementById('statSpendOpt').textContent = fmt(spendOptTotal);
+            document.getElementById('statSpendOptPct').textContent =
+                totalSpend > 0 ? ((spendOptTotal / totalSpend) * 100).toFixed(1) + '% of spend' : '';
+
+            document.getElementById('costAvoidTotal').textContent = fmt(costAvoidTotal);
+            document.getElementById('timeBackTotal').textContent = fmt(timeBackDollars);
+            document.getElementById('spendOptTotal').textContent = fmt(spendOptTotal);
+
+            renderItems('costAvoidItems', costAvoidItems);
+            renderItems('timeBackItems', timeBackDisplay);
+            renderItems('spendOptItems', spendOptItems);
+
+            // CAPACITY GROWTH
+            if (fmTeamSize > 0 && locations > 0) {
+                document.getElementById('capacityCard').style.display = 'block';
+                var workingHoursPerFM = 8 * 261;
+                var totalTeamHours = fmTeamSize * workingHoursPerFM;
+                var currentLocsPerFM = locations / fmTeamSize;
+                var hoursPerLocation = workingHoursPerFM / currentLocsPerFM;
+                var fexaCapacity = Math.round((totalTeamHours + totalTimeHours) / hoursPerLocation);
+                var growthRate = locationGrowth / 100;
+                var yearProjections = [];
+                for (var y = 0; y <= 5; y++) {
+                    yearProjections.push(Math.round(locations * Math.pow(1 + growthRate, y)));
+                }
+                var yr5Demand = yearProjections[5];
+
+                document.getElementById('capToday').textContent = locations.toLocaleString();
+                document.getElementById('capPlatform').textContent = fexaCapacity.toLocaleString();
+                document.getElementById('capPlatformPct').textContent = '+' + Math.round((fexaCapacity / locations - 1) * 100) + '% capacity, same ' + fmTeamSize + ' FMs';
+                document.getElementById('capYr5').textContent = yr5Demand.toLocaleString();
+                document.getElementById('capYr5Status').textContent = yr5Demand <= fexaCapacity ? 'covered by platform' : 'may need additional FMs';
+
+                var timelineHtml = '';
+                for (var y2 = 1; y2 <= 5; y2++) {
+                    var demand = yearProjections[y2];
+                    var covered = demand <= fexaCapacity;
+                    timelineHtml += '<div style="display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid var(--gray-100)"><span>Year ' + y2 + ': <strong>' + demand.toLocaleString() + ' locations</strong></span><span style="color:' + (covered ? 'var(--accent-dark)' : '#c05000') + ';font-weight:600">' + (covered ? 'Covered' : 'Over capacity') + '</span></div>';
+                }
+                document.getElementById('growthTimeline').innerHTML = timelineHtml;
+
+                var yearsAbsorbed = yearProjections.findIndex(function(d) { return d > fexaCapacity; });
+                var absorbYears = yearsAbsorbed === -1 ? '5+' : (yearsAbsorbed - 1);
+                document.getElementById('capSummary').textContent =
+                    'Platform capacity of ' + fexaCapacity.toLocaleString() + ' locations absorbs ' + absorbYears + ' years of growth at ' + locationGrowth + '%/yr with no new FM hires required.';
+
+                lastCalcData.fmTeamSize = fmTeamSize;
+                lastCalcData.locationGrowth = locationGrowth;
+                lastCalcData.fexaCapacity = fexaCapacity;
+                lastCalcData.yearProjections = yearProjections;
+                lastCalcData.absorbYears = absorbYears;
+            } else {
+                document.getElementById('capacityCard').style.display = 'none';
+            }
+
+            if (window.innerWidth <= 900) {
+                document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        document.querySelectorAll('input').forEach(function(el) {
+            el.addEventListener('keydown', function(e) { if (e.key === 'Enter') calculate(); });
+        });
+
+        function generateReport() {
+            if (!lastCalcData) { calculate(); }
+            var d = lastCalcData;
+            if (!d) return;
+
+            var logoUrl = d.clientDomain ? 'https://logo.clearbit.com/' + d.clientDomain + '?size=80' : '';
+
+            // Hours breakdown for report (Invoice Automation REMOVED)
+            var hRaw = [
+                { label: 'Manual Review', value: Math.round(d.manualReviewHours) },
+                { label: 'Reporting', value: Math.round(d.reportingHours) },
+                { label: 'Comms', value: Math.round(d.commsHours) },
+                { label: 'Workflows', value: Math.round(d.workflowHours) }
+            ];
+            var hMax = Math.max.apply(null, hRaw.map(function(h) { return h.value; }));
+            var hoursBarHtml = hRaw.map(function(h) {
+                var pct = hMax > 0 ? Math.round(h.value / hMax * 100) : 0;
+                return '<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">' +
+                    '<div style="width:90px;font-size:10px;text-align:right;color:#4b5563">' + h.label + '</div>' +
+                    '<div style="flex:1;background:#e5e7eb;border-radius:4px;height:14px">' +
+                    '<div style="width:' + pct + '%;background:linear-gradient(90deg,#1a56db,#3b82f6);border-radius:4px;height:14px"></div></div>' +
+                    '<div style="width:55px;font-size:10px;font-weight:700;color:#1a56db">' + h.value.toLocaleString() + ' hrs</div></div>';
+            }).join('');
+
+            // Cost avoidance items for report
+            var caItems = d.costAvoidItems || [];
+            var caHtml = caItems.filter(function(i) { return i.value > 0; }).map(function(i) {
+                return '<tr><td style="padding:4px 8px;font-size:10px;border-bottom:1px solid #f3f4f6">' + i.label + '</td>' +
+                    '<td style="padding:4px 8px;font-size:10px;font-weight:700;text-align:right;border-bottom:1px solid #f3f4f6">' + fmt(i.value) + '</td></tr>';
+            }).join('');
+
+            // Capacity section
+            var capacityHtml = '';
+            if (d.fexaCapacity && d.yearProjections) {
+                var projRows = '';
+                for (var y = 1; y <= 5; y++) {
+                    var demand = d.yearProjections[y];
+                    var covered = demand <= d.fexaCapacity;
+                    projRows += '<tr><td style="padding:3px 8px;font-size:10px;border-bottom:1px solid #f3f4f6">Year ' + y + '</td>' +
+                        '<td style="padding:3px 8px;font-size:10px;font-weight:700;text-align:right;border-bottom:1px solid #f3f4f6">' + demand.toLocaleString() + '</td>' +
+                        '<td style="padding:3px 8px;font-size:10px;text-align:center;color:' + (covered ? '#059669' : '#c05000') + ';font-weight:600;border-bottom:1px solid #f3f4f6">' + (covered ? '✓' : '⚠') + '</td></tr>';
+                }
+                capacityHtml = '<div style="margin-top:14px;padding:12px;background:#E3F9F9;border-radius:8px">' +
+                    '<div style="font-size:11px;font-weight:700;color:#00313D;margin-bottom:6px">Capacity Growth — Same Team</div>' +
+                    '<div style="display:flex;gap:12px;margin-bottom:8px">' +
+                    '<div style="flex:1;text-align:center;padding:6px;background:white;border-radius:6px"><div style="font-size:9px;color:#6b7280;text-transform:uppercase">Today</div><div style="font-size:16px;font-weight:800">' + d.locations.toLocaleString() + '</div></div>' +
+                    '<div style="flex:1;text-align:center;padding:6px;background:white;border-radius:6px"><div style="font-size:9px;color:#009C9E;text-transform:uppercase">Platform Cap.</div><div style="font-size:16px;font-weight:800;color:#00313D">' + d.fexaCapacity.toLocaleString() + '</div></div>' +
+                    '<div style="flex:1;text-align:center;padding:6px;background:white;border-radius:6px"><div style="font-size:9px;color:#059669;text-transform:uppercase">Yr 5 Demand</div><div style="font-size:16px;font-weight:800;color:#059669">' + d.yearProjections[5].toLocaleString() + '</div></div>' +
+                    '</div>' +
+                    '<table style="width:100%;border-collapse:collapse">' + projRows + '</table>' +
+                    '<div style="margin-top:6px;font-size:9px;color:#00313D;font-weight:600">Platform absorbs ' + d.absorbYears + ' years of growth at ' + d.locationGrowth + '%/yr — no new FM hires.</div>' +
+                    '</div>';
+            }
+
+            // EBITDA impact
+            var ebitdaMultiple = 100 / d.ebitdaMargin;
+            var enterpriseImpact = d.grandTotal * ebitdaMultiple;
+
+            var reportHTML = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Fexa ROI — ' + d.clientName + '<\/title>' +
+                '<style>' +
+                '*{margin:0;padding:0;box-sizing:border-box}' +
+                'body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#fff;color:#111827;width:1100px;margin:0 auto}' +
+                '.page{padding:16px 24px 16px}' +
+                '@page{size:landscape;margin:0.25in}@media print{body{width:100%;transform:scale(0.92);transform-origin:top left}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}.page{padding:10px 16px 10px}}' +
+                '<\/style><\/head><body><div class="page">' +
+
+                // Header
+                '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid #e5e7eb">' +
+                '<div style="display:flex;align-items:center;gap:12px">' +
+                (logoUrl ? '<img src="' + logoUrl + '" style="width:40px;height:40px;border-radius:8px;object-fit:contain;border:1px solid #e5e7eb" onerror="this.style.display=\'none\'" />' : '') +
+                '<div><div style="font-size:18px;font-weight:800;color:#00313D">' + d.clientName + ' — ROI Summary</div>' +
+                '<div style="font-size:10px;color:#6b7280">Prepared ' + new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) + ' | Powered by Fexa</div></div></div>' +
+                '<img src="https://www.fexa.io/wp-content/uploads/2024/10/fexa-logo-dark.svg" style="height:28px" onerror="this.style.display=\'none\'" />' +
+                '</div>' +
+
+                // Hero numbers row
+                '<div style="display:flex;gap:10px;margin-bottom:14px">' +
+                '<div style="flex:2;background:linear-gradient(135deg,#10b981,#059669);border-radius:10px;padding:14px 18px;color:white;text-align:center">' +
+                '<div style="font-size:9px;text-transform:uppercase;letter-spacing:1px;opacity:0.85">Total Estimated Annual Savings</div>' +
+                '<div style="font-size:32px;font-weight:800;letter-spacing:-1px;line-height:1.15">' + fmt(d.grandTotal) + '</div>' +
+                '<div style="font-size:10px;opacity:0.9">' + (d.totalSpend > 0 ? ((d.grandTotal / d.totalSpend) * 100).toFixed(1) + '% of total spend' : '') + '</div></div>' +
+
+                '<div style="flex:1;background:#ecfdf5;border-radius:10px;padding:14px 12px;text-align:center">' +
+                '<div style="font-size:9px;text-transform:uppercase;color:#059669;font-weight:600">Cost Avoidance</div>' +
+                '<div style="font-size:22px;font-weight:800;color:#059669">' + fmt(d.costAvoidTotal) + '</div></div>' +
+
+                '<div style="flex:1;background:#eff6ff;border-radius:10px;padding:14px 12px;text-align:center">' +
+                '<div style="font-size:9px;text-transform:uppercase;color:#1a56db;font-weight:600">Time Back (FTE Value)</div>' +
+                '<div style="font-size:22px;font-weight:800;color:#1a56db">' + fmt(d.timeBackDollars) + '</div>' +
+                '<div style="font-size:9px;color:#6b7280">' + Math.round(d.totalTimeHours).toLocaleString() + ' hours saved</div></div>' +
+
+                '<div style="flex:1;background:#faf5ff;border-radius:10px;padding:14px 12px;text-align:center">' +
+                '<div style="font-size:9px;text-transform:uppercase;color:#7c3aed;font-weight:600">R&M Optimization</div>' +
+                '<div style="font-size:22px;font-weight:800;color:#7c3aed">' + fmt(d.spendOptTotal) + '</div></div>' +
+                '</div>' +
+
+                // Two-column detail
+                '<div style="display:flex;gap:14px">' +
+
+                // Left column - Cost Avoidance table
+                '<div style="flex:1">' +
+                '<div style="font-size:11px;font-weight:700;color:#059669;margin-bottom:6px;padding-bottom:4px;border-bottom:2px solid #ecfdf5">Cost Avoidance Breakdown</div>' +
+                '<table style="width:100%;border-collapse:collapse">' + caHtml + '</table>' +
+
+                // R&M spend optimization
+                '<div style="margin-top:10px;font-size:11px;font-weight:700;color:#7c3aed;margin-bottom:6px;padding-bottom:4px;border-bottom:2px solid #faf5ff">R&M Spend Optimization</div>' +
+                '<table style="width:100%;border-collapse:collapse"><tr><td style="padding:4px 8px;font-size:10px">Budget Module</td>' +
+                '<td style="padding:4px 8px;font-size:10px;font-weight:700;text-align:right">' + fmt(d.budgetSavings) + '</td></tr></table>' +
+
+                // EBITDA impact
+                '<div style="margin-top:10px;padding:10px;background:#fff7ed;border-radius:8px">' +
+                '<div style="font-size:10px;font-weight:700;color:#c05000;margin-bottom:2px">Enterprise Value Impact</div>' +
+                '<div style="font-size:9px;color:#4b5563">' + fmt(d.grandTotal) + ' savings × ' + ebitdaMultiple.toFixed(1) + '× EBITDA multiple (' + d.ebitdaMargin + '% margin)</div>' +
+                '<div style="font-size:18px;font-weight:800;color:#c05000;margin-top:2px">' + fmt(enterpriseImpact) + '</div></div>' +
+                '</div>' +
+
+                // Right column - Time Back
+                '<div style="flex:1">' +
+                '<div style="font-size:11px;font-weight:700;color:#1a56db;margin-bottom:6px;padding-bottom:4px;border-bottom:2px solid #eff6ff">Time Back — Hours Recaptured</div>' +
+                hoursBarHtml +
+                '<div style="margin-top:4px;padding:6px 8px;background:#eff6ff;border-radius:6px;font-size:10px;color:#1a56db;font-weight:700;text-align:center">' +
+                'Total: ' + Math.round(d.totalTimeHours).toLocaleString() + ' hours/year = ' + fmt(d.timeBackDollars) + ' @ $35/hr</div>' +
+
+                // Capacity growth
+                capacityHtml +
+                '</div>' +
+
+                '</div>' +
+
+                // Input assumptions
+                '<div style="margin-top:12px;padding:8px 12px;background:#f9fafb;border-radius:8px;font-size:9px;color:#6b7280;display:flex;flex-wrap:wrap;gap:4px 16px">' +
+                '<span><strong>Inputs:</strong></span>' +
+                '<span>Spend: ' + fmt(d.totalSpend) + '</span>' +
+                '<span>WOs: ' + d.totalWOs.toLocaleString() + '</span>' +
+                '<span>Invoices: ' + d.totalInv.toLocaleString() + '</span>' +
+                '<span>Locations: ' + d.locations.toLocaleString() + '</span>' +
+                '<span>Vendors: ' + d.vendors.toLocaleString() + '</span>' +
+                '<span>Assets: ' + d.totalAssets.toLocaleString() + '</span>' +
+                (d.fmTeamSize > 0 ? '<span>FM Team: ' + d.fmTeamSize + '</span>' : '') +
+                '</div>' +
+
+                // Disclaimer
+                '<div style="margin-top:6px;font-size:8px;color:#9ca3af;text-align:center">' +
+                'Estimates based on Fexa customer benchmarks. Actual savings may vary. Confidential — prepared exclusively for ' + d.clientName + '.</div>' +
+
+                '</div><\/body><\/html>';
+
+            // Render into iframe
+            var existing = document.getElementById('reportFrame');
+            if (existing) existing.remove();
+            var iframe = document.createElement('iframe');
+            iframe.id = 'reportFrame';
+            iframe.style.cssText = 'width:100%;height:700px;border:1px solid #e5e7eb;border-radius:10px;margin-top:16px';
+            iframe.srcdoc = reportHTML;
+            document.getElementById('results').appendChild(iframe);
+        }
+
+        function downloadPDF() {
+            if (!lastCalcData) { calculate(); }
+            generateReport();
+            setTimeout(function() {
+                var iframe = document.getElementById('reportFrame');
+                if (!iframe) { alert('Generate the report first.'); return; }
+                var win = window.open('', '_blank');
+                win.document.write(iframe.srcdoc);
+                win.document.close();
+                win.onload = function() {
+                    setTimeout(function() {
+                        win.print();
+                    }, 2000);
+                };
+            }, 500);
+        }
+
+        function showToast(msg) {
+            var t = document.getElementById('toast');
+            t.textContent = msg;
+            t.classList.add('show');
+            setTimeout(function() { t.classList.remove('show'); }, 3000);
+        }
+
+        function clearForm() {
+            document.querySelectorAll('input').forEach(function(el) {
+                el.value = '';
+                delete el.dataset.userEdited;
+            });
+            document.getElementById('results').style.display = 'none';
+            document.getElementById('placeholder').style.display = 'block';
+            document.getElementById('reportBtn').style.display = 'none';
+            document.getElementById('pdfBtn').style.display = 'none';
+            document.getElementById('saveBtn').style.display = 'none';
+            document.getElementById('capacityCard').style.display = 'none';
+            var iframe = document.getElementById('reportFrame');
+            if (iframe) iframe.remove();
+            lastCalcData = null;
+        }
+
+        function saveToPipeline() {
+            var d = lastCalcData;
+            if (!d) { alert('Calculate first.'); return; }
+            var url = document.getElementById('sheetUrl').value.trim();
+            if (!url) { alert('Please enter your Google Apps Script Web App URL in the config section.'); return; }
+
+            var payload = {
+                clientName: d.clientName,
+                clientDomain: d.clientDomain,
+                totalSpend: d.totalSpend,
+                totalInvoices: d.totalInv,
+                totalWOs: d.totalWOs,
+                locations: d.locations,
+                vendors: d.vendors,
+                proposals: d.proposals,
+                callCenter: d.callCenter,
+                totalAssets: d.totalAssets,
+                fmTeamSize: d.fmTeamSize,
+                locationGrowth: d.locationGrowth,
+                ebitdaMargin: d.ebitdaMargin,
+                avgInvoice: d.avgInvoice,
+                costAvoidance: Math.round(d.costAvoidTotal),
+                timeBackHours: Math.round(d.totalTimeHours),
+                timeBackDollars: Math.round(d.timeBackDollars),
+                spendOptimization: Math.round(d.spendOptTotal),
+                grandTotal: Math.round(d.grandTotal),
+                fexaCapacity: d.fexaCapacity || 0,
+                absorbYears: d.absorbYears || '',
+                date: new Date().toISOString()
+            };
+
+            fetch(url, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).then(function() {
+                showToast('Saved to pipeline sheet!');
+            }).catch(function(err) {
+                alert('Error saving: ' + err.message);
+            });
+        }
+
+        // Google Sheets URL persistence
+        (function() {
+            var sheetInput = document.getElementById('sheetUrl');
+            var saved = localStorage.getItem('fexaRoiSheetUrl');
+            if (saved) sheetInput.value = saved;
+            sheetInput.addEventListener('blur', function() {
+                localStorage.setItem('fexaRoiSheetUrl', this.value.trim());
+            });
+        })();
+    </script>
+    <div id="toast" class="toast"></div>
+</body>
+</html>

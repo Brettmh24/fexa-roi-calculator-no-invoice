@@ -740,7 +740,6 @@
                 { label: 'Workflow Opt.', value: Math.round(d.workflowHours) },
                 { label: 'Auto Comms', value: Math.round(d.commsHours) },
                 { label: 'AI Query Agent', value: Math.round(d.reportingHours) },
-                { label: 'Invoice Auto.', value: Math.round(d.invoiceHours) },
                 { label: 'AI WO Review', value: Math.round(d.manualReviewHours) },
             ].filter(i => i.value > 0).sort((a, b) => a.value - b.value);
             const hTotal = Math.round(d.totalTimeHours);

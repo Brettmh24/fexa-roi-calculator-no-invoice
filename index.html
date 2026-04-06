@@ -292,6 +292,7 @@
 
                 <button class="calculate-btn" onclick="calculate()">Calculate My Savings</button>
                 <button class="report-btn" id="reportBtn" onclick="generateReport()">Generate One-Pager Report</button>
+                <button class="report-btn" id="pdfBtn" onclick="downloadPDF()" style="display:none;background:linear-gradient(135deg,#7c3aed 0%,#5b21b6 100%)">Download One-Pager as PDF</button>
                 <button class="report-btn" id="saveBtn" onclick="saveToPipeline()" style="display:none;background:linear-gradient(135deg,#009C9E 0%,#007A7C 100%)">Save to Pipeline Sheet</button>
                 <button class="clear-btn" onclick="clearForm()">Clear / New Client</button>
 
@@ -616,6 +617,7 @@
             document.getElementById('results').style.display = 'block';
             document.getElementById('reportBtn').style.display = 'block';
             document.getElementById('saveBtn').style.display = 'block';
+            document.getElementById('pdfBtn').style.display = 'block';
 
             document.getElementById('grandTotal').textContent = fmt(grandTotal);
             document.getElementById('grandPct').textContent =
@@ -1123,6 +1125,20 @@ new Chart(document.getElementById('capacityChart'),{
         // ═══════════════════════════════════════════════════════════
         //  CLEAR / NEW CLIENT
         // ═══════════════════════════════════════════════════════════
+       function downloadPDF() {
+    if (!lastCalcData) { calculate(); }
+    generateReport();
+    setTimeout(function() {
+        var iframe = document.getElementById('reportFrame');
+        if (!iframe) { alert('Generate the report first.'); return; }
+        var win = window.open('', '_blank');
+        win.document.write(iframe.srcdoc);
+        win.document.close();
+        win.onload = function() {
+            win.print();
+        };
+    }, 500);
+}
         function clearForm() {
             document.querySelectorAll('.card input[type="text"]').forEach(el => {
                 el.value = '';
@@ -1132,6 +1148,7 @@ new Chart(document.getElementById('capacityChart'),{
             document.getElementById('placeholder').style.display = 'block';
             document.getElementById('reportBtn').style.display = 'none';
             document.getElementById('saveBtn').style.display = 'none';
+            document.getElementById('pdfBtn').style.display = 'none';
             const cap = document.getElementById('capacityCard');
             if (cap) cap.style.display = 'none';
             const iframe = document.getElementById('reportFrame');

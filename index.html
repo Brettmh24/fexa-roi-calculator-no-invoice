@@ -944,8 +944,7 @@
     <div class="bottom-panel">
       <div class="section-label">Capacity Growth &mdash; Locations Managed, Same Team</div>
       <div class="bottom-chart-wrap"><canvas id="capacityChart"></canvas></div>
-      <div class="capacity-note">${hTotal.toLocaleString()} hours returned annually gives the same ${fmCount}-person FM team the bandwidth to absorb growth through 2030+ &mdash; no new hires required.</div>
-    </div>
+      <div class="capacity-note">${hTotal.toLocaleString()} hours returned annually gives the same ${fmCount}-person FM team the bandwidth to absorb ${d.absorbYears} years of growth at ${d.locationGrowth}%/yr.${d.absorbYears === '5+' ? ' No new hires required.' : ' Additional FMs may be needed beyond Year ' + d.absorbYears + '.'}
   </div>
 
   <!-- ADDITIONAL VALUE BAND -->

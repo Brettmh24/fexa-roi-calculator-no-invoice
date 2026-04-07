@@ -557,11 +557,11 @@
             const commsFexa = (followUpWOs * 1 / 60) * 4;
             const commsHours = commsToday - commsFexa;
 
-            const wosInternal = totalWOs * 0.4;
+            const wosInternal = totalWOs * 0.3;
             const weeklyInternal = wosInternal / 52;
-            const weeklyReviewHrs = weeklyInternal * 3 / 60;
-            const fmsReduced = weeklyReviewHrs * 0.8;
-            const manualReviewHours = 5 * fmsReduced * 52;
+            const weeklyReviewHrs = weeklyInternal * 2 / 60;
+            const fmsReduced = weeklyReviewHrs * 0.4;
+            const manualReviewHours = 3 * fmsReduced * 52;
 
             const reportingHours = 9 * 52;
 
